@@ -41,7 +41,7 @@ class UserForm extends React.Component {
                 },
                 role: {
                     value: '',
-                    placeholder: 'ADMIN or REGULAR_USER',
+                    placeholder: 'ADMIN or REGULAR',
                     valid: false,
                     touched: false,
                 },

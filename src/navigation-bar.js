@@ -1,6 +1,9 @@
 import React from 'react'
 import logo from './commons/images/icon.png';
 
+
+
+
 import {DropdownItem, DropdownMenu, DropdownToggle, Nav, Navbar, NavbarBrand, NavItem, UncontrolledDropdown} from 'reactstrap';
 import {NavLink, withRouter} from "react-router-dom";
 
@@ -32,26 +35,42 @@ const NavigationBar = (props) => {
                         </DropdownToggle>
                         <DropdownMenu right>
 
-                            {!props.username &&
+                            {!props.username && 
                                 <DropdownItem>
                                     <NavLink className='nav-link' to="/auth">Login</NavLink>
                                 </DropdownItem>
                             }
 
+                            {props.username === 'admin' &&
                             <DropdownItem>
                                 <NavLink className='nav-link' to="/user">User</NavLink>
                             </DropdownItem>
+                            }
 
+                            {props.username === 'admin' &&
                             <DropdownItem>
                                 <NavLink className='nav-link' to='/client'>Client</NavLink>
                             </DropdownItem>
-
+                            }
+                            
+                            {props.username === 'admin' &&
                             <DropdownItem>
                                 <NavLink className='nav-link' to="/device">Device</NavLink>
                             </DropdownItem>
+                            }
+                            {props.username !== 'admin' && props.username &&
+                            <DropdownItem>
+                                <NavLink className='nav-link' to="/userDevice">My Devices</NavLink>
+                            </DropdownItem>
+                            }
+                            {props.username !== 'admin' && props.username &&
+                            <DropdownItem>
+                                <NavLink className='nav-link' to="/consumption">Consumptions</NavLink>
+                            </DropdownItem>
+                            }
 
                            
-                            {!props.username &&
+                            {props.username && 
                                 <DropdownItem>
                                     <a className='nav-link' onClick={handleLogout}>Logout</a>
                                 </DropdownItem>

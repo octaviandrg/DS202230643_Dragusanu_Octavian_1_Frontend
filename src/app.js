@@ -7,9 +7,11 @@ import DeviceContainer from './device/device-container'
 import UserContainer from './user/user-container'
 import ClientContainer from './client/client-container'
 import LoginContainer from './login/login-container'
+import UserDeviceContainer from './device/user-device-container'
 
 import ErrorPage from './commons/errorhandling/error-page';
 import styles from './commons/styles/project-style.css';
+import ConsumptionContainer from './consumption/consumption-container';
 
 class App extends React.Component {
 
@@ -64,7 +66,7 @@ class App extends React.Component {
             <div className={styles.back}>
             <Router>
                 <div>
-                    <NavigationBar />
+                    <NavigationBar username={this.state.user.username} onLogout={this.onLogout}/>
                     <Switch>
                         <Route
                             exact
@@ -101,6 +103,16 @@ class App extends React.Component {
                             exact
                             path='/device'
                             render={() => <DeviceContainer/>}
+                        />
+                        <Route
+                            exact
+                            path='/userDevice'
+                            render={() => <UserDeviceContainer/>}
+                        />
+                        <Route
+                            exact
+                            path='/consumption'
+                            render={() => <ConsumptionContainer/>}
                         />
                         {/*Error*/}
                         <Route

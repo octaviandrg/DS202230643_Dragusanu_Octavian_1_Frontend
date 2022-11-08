@@ -104,41 +104,13 @@ class DeviceContainer extends React.Component {
                         <Col sm={{size: '8', offset: 1}}>
                             <Button color="primary" onClick={this.toggleForm}>Add Device </Button>
                         </Col>
-                    </Row>
-                    <br/>
-                    <Row>
-                        <Col sm={{size: '8', offset: 1}}>
-
-                            {this.state.errorStatus > 0 && <APIResponseErrorMessage
-                                errorStatus={this.state.errorStatus}
-                                error={this.state.error}
-                            />   }
-                        </Col>
-                    </Row>
-                </Card>
-
-                <Card>
-                    <br/>
-                    <Row>
+                        <br/>
+                        <br/>
                         <Col sm={{size: '8', offset: 1}}>
                             <Button color="primary" onClick={this.toggleFormUpdate}>Update Device </Button>
                         </Col>
-                    </Row>
-                    <br/>
-                    <Row>
-                        <Col sm={{size: '8', offset: 1}}>
-
-                            {this.state.errorStatus > 0 && <APIResponseErrorMessage
-                                errorStatus={this.state.errorStatus}
-                                error={this.state.error}
-                            />   }
-                        </Col>
-                    </Row>
-                </Card>
-
-                <Card>
-                    <br/>
-                    <Row>
+                        <br/>
+                        <br/>
                         <Col sm={{size: '8', offset: 1}}>
                             <Button color="primary" onClick={this.toggleFormDelete}>Delete Device </Button>
                         </Col>
@@ -146,37 +118,18 @@ class DeviceContainer extends React.Component {
                     <br/>
                     <Row>
                         <Col sm={{size: '8', offset: 1}}>
-
-                            {this.state.errorStatus > 0 && <APIResponseErrorMessage
-                                errorStatus={this.state.errorStatus}
-                                error={this.state.error}
-                            />   }
-                        </Col>
-                    </Row>
-                </Card>
-
-               
-
-                <Card>
-                    <br/>
-                    <Row>
-                        <Col sm={{size: '8', offset: 1}}>
-                            <Button color="primary" onClick={this.onViewDeviceClicked}>View Device </Button>
-                        </Col>
-                    </Row>
-                    <br/>
-                    {this.state.viewDevicesToggle && (
-                        <Row>
-                            <Col sm={{size: '8', offset: 1}}>
                             {this.state.isLoaded && <DeviceTable tableData = {this.state.tableData}/>}
                             {this.state.errorStatus > 0 && <APIResponseErrorMessage
                                 errorStatus={this.state.errorStatus}
                                 error={this.state.error}
                             />   }
-                            </Col>
-                        </Row>
-                    )}
+                        </Col>
+                    </Row>
+                   
+    
                 </Card>
+
+               
 
 
                 <Modal isOpen={this.state.selected} toggle={this.toggleForm}

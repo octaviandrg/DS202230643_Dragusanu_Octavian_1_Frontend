@@ -14,6 +14,21 @@ function getDevices(callback) {
     RestApiClient.performRequest(request, callback);
 }
 
+function getDevicesByUsername(callback) {
+    const localStorageUser = localStorage.getItem("electricity-user");
+    let currentUser = {
+        id: null,
+        username: null,
+        role: 'UNKNOWN'
+    };
+    currentUser = JSON.parse(localStorageUser);
+    let request = new Request(HOST.backend_api + endpoint.device + "/byUsername/" + currentUser.username, {
+        method: 'GET',
+    });
+    console.log(request.url);
+    RestApiClient.performRequest(request, callback);
+}
+
 function getDeviceById(params, callback){
     let request = new Request(HOST.backend_api + endpoint.device + params.id, {
        method: 'GET'
@@ -67,5 +82,6 @@ export {
     getDeviceById,
     deleteDevice,
     postDevice,
-    putDevice
+    putDevice,
+    getDevicesByUsername
 };

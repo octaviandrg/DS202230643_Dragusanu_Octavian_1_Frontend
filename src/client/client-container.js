@@ -104,42 +104,13 @@ class ClientContainer extends React.Component {
                         <Col sm={{size: '8', offset: 1}}>
                             <Button color="primary" onClick={this.toggleForm}>Add Client </Button>
                         </Col>
-                    </Row>
-                    <br/>
-                    <Row>
-                        <Col sm={{size: '8', offset: 1}}>
-
-                            {this.state.errorStatus > 0 && <APIResponseErrorMessage
-                                errorStatus={this.state.errorStatus}
-                                error={this.state.error}
-                            />   }
-                        </Col>
-                    </Row>
-                </Card>
-
-                {<Card>
-                    <br/>
-                    <Row>
+                        <br/>
+                        <br/>
                         <Col sm={{size: '8', offset: 1}}>
                             <Button color="primary" onClick={this.toggleFormUpdate}>Update Client </Button>
                         </Col>
-                    </Row>
-                    <br/>
-                    <Row>
-                        <Col sm={{size: '8', offset: 1}}>
-
-                            {this.state.errorStatus > 0 && <APIResponseErrorMessage
-                                errorStatus={this.state.errorStatus}
-                                error={this.state.error}
-                            />   }
-                        </Col>
-                    </Row>
-                </Card>}
-
-
-                <Card>
-                    <br/>
-                    <Row>
+                        <br/>
+                        <br/>
                         <Col sm={{size: '8', offset: 1}}>
                             <Button color="primary" onClick={this.toggleFormDelete}>Delete Client </Button>
                         </Col>
@@ -147,36 +118,19 @@ class ClientContainer extends React.Component {
                     <br/>
                     <Row>
                         <Col sm={{size: '8', offset: 1}}>
-
-                            {this.state.errorStatus > 0 && <APIResponseErrorMessage
-                                errorStatus={this.state.errorStatus}
-                                error={this.state.error}
-                            />   }
-                        </Col>
-                    </Row>
-                </Card>
-
-
-                <Card>
-                    <br/>
-                    <Row>
-                        <Col sm={{size: '8', offset: 1}}>
-                            <Button color="primary" onClick={this.onViewClientClicked}>View Client </Button>
-                        </Col>
-                    </Row>
-                    <br/>
-                    {this.state.viewClientsToggle && (
-                        <Row>
-                            <Col sm={{size: '8', offset: 1}}>
                             {this.state.isLoaded && <ClientTable tableData = {this.state.tableData}/>}
                             {this.state.errorStatus > 0 && <APIResponseErrorMessage
                                 errorStatus={this.state.errorStatus}
                                 error={this.state.error}
                             />   }
-                            </Col>
-                        </Row>
-                    )}
+                        </Col>
+                    </Row>
+
+               
+                    
+                    
                 </Card>
+
 
                 <Modal isOpen={this.state.selected} toggle={this.toggleForm}
                        className={this.props.className} size="lg">
