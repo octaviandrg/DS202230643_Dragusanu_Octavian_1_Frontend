@@ -79,7 +79,7 @@ class UserDeviceContainer extends React.Component {
         return (
             <div>
                 <CardHeader>
-                    <strong> Device Management </strong>
+                <strong><h2><center>Consumption</center></h2>  </strong>
                 </CardHeader>
                 <Card>
                     <Row>

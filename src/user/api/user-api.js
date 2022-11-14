@@ -24,7 +24,7 @@ function getUserById(params, callback){
 }
 
 function postUser(user, callback){
-    let request = new Request(HOST.backend_api + endpoint.user + '/create' , {
+    let request = new Request(HOST.backend_api + "/auth/registration" , {
         method: 'POST',
         headers : {
             'Accept': 'application/json',

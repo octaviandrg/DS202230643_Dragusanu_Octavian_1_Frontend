@@ -96,7 +96,7 @@ class DeviceContainer extends React.Component {
         return (
             <div>
                 <CardHeader>
-                    <strong> Device Management </strong>
+                    <strong><h2><center>Device</center></h2>  </strong>
                 </CardHeader>
                 <Card>
                     <br/>

@@ -96,7 +96,7 @@ class ClientContainer extends React.Component {
         return (
             <div>
                 <CardHeader>
-                    <strong> Client Management </strong>
+                    <strong><h2><center>Client</center></h2>  </strong>
                 </CardHeader>
                 <Card>
                     <br/>

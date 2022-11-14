@@ -21,11 +21,11 @@ const NavigationBar = (props) => {
 
     return (
         <div>
-            <Navbar color="dark" light expand="md">
+            <Navbar color="dark" light expand="md" style = {textStyle} >
                 <NavbarBrand href="/">
                     <img src={logo} width={"50"}
                          height={"35"}/>
-                     {props.username}
+                     
                 </NavbarBrand>
                 <Nav className="mr-auto" navbar>
 
@@ -63,11 +63,6 @@ const NavigationBar = (props) => {
                                 <NavLink className='nav-link' to="/userDevice">My Devices</NavLink>
                             </DropdownItem>
                             }
-                            {props.username !== 'admin' && props.username &&
-                            <DropdownItem>
-                                <NavLink className='nav-link' to="/consumption">Consumptions</NavLink>
-                            </DropdownItem>
-                            }
 
                            
                             {props.username && 
@@ -79,6 +74,7 @@ const NavigationBar = (props) => {
                         </DropdownMenu>
                     </UncontrolledDropdown>
                 </Nav>
+                Welcome,   {props.username}
             </Navbar>
         </div>
     )

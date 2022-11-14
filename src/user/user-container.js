@@ -96,7 +96,7 @@ class UserContainer extends React.Component {
         return (
             <div>
                 <CardHeader>
-                    <strong> User Management </strong>
+                <strong><h2><center>User</center></h2>  </strong>
                 </CardHeader>
                 <Card>
                     <br/>

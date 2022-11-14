@@ -77,7 +77,7 @@ class ConsumptionContainer extends React.Component {
         return (
             <div>
                 <CardHeader>
-                    <strong> Consumption Management </strong>
+                <strong><h2><center>Consumption</center></h2>  </strong>
                 </CardHeader>
                 <Card>
                     
