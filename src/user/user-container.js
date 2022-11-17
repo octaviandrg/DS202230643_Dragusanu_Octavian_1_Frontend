@@ -82,7 +82,7 @@ class UserContainer extends React.Component {
             selectedDelete: false,
             selectedUpdate : false,
         });
-        //this.toggleForm();
+        this.toggleForm();
         this.fetchClients();
     }
 

@@ -63,7 +63,7 @@ class ConsumptionContainer extends React.Component {
             isLoaded: false,
             selected: false,
         });
-        //this.toggleForm();
+        this.toggleForm();
         this.fetchClients();
     }
 

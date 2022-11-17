@@ -64,7 +64,7 @@ class UserDeviceContainer extends React.Component {
             selected: false,
             selectedGetConsumption: false
         });
-       // this.toggleForm();
+        this.toggleForm();
         this.fetchDevices();
         
     }
